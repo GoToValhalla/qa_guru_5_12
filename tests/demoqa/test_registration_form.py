@@ -1,4 +1,5 @@
 import os
+import time
 
 import allure
 from selene import have, by
@@ -37,6 +38,7 @@ def test_successful(setup_browser):
         browser.element("#stateCity-wrapper").element(by.text("NCR")).click()
         browser.element("#city").click()
         browser.element("#stateCity-wrapper").element(by.text("Delhi")).click()
+        time.sleep(2)
         browser.element("#submit").click()
 
     with allure.step("Check form results"):
