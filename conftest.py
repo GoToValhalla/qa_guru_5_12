@@ -47,6 +47,7 @@ def setup_browser(request):
     )
     browser = Browser(Config(driver))
 
+
     yield browser
 
     attach.add_html(browser)
